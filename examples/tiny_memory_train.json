@@ -1,0 +1,42 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Remember this preference: the project codename is Delta Fern."
+      },
+      {
+        "role": "assistant",
+        "content": "I will remember that the project codename is Delta Fern."
+      },
+      {
+        "role": "user",
+        "content": "What is the project codename?"
+      },
+      {
+        "role": "assistant",
+        "content": "The project codename is Delta Fern."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Store this routing rule: use amber queue for billing bugs."
+      },
+      {
+        "role": "assistant",
+        "content": "Stored: billing bugs should use the amber queue."
+      },
+      {
+        "role": "user",
+        "content": "Which queue handles billing bugs?"
+      },
+      {
+        "role": "assistant",
+        "content": "Billing bugs should use the amber queue."
+      }
+    ]
+  }
+]

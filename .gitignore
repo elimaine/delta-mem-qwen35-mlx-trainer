@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+.venv-mlx*/
+venv/
+env/
+.env
+.env.*
+
+# Local model/cache artifacts
+models/
+adapters/
+state/
+outputs/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.npz
+
+# Benchmark and scratch output
+benchmarks/results/
+*.bench.json
+tmp/
+scratch/
+
+# Local editor/system files
+.DS_Store
+.idea/
+.vscode/
