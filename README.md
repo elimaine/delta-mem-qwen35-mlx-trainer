@@ -8,19 +8,29 @@ the reusable native-MLX trainer, runtime adapter loader, and no-heavy unit tests
 while excluding local planning logs, model checkpoints, benchmark outputs, and
 machine-specific paths.
 
-## Where this stands (November 2026)
+## Status (November 2026)
 
-A one-commit research export from June 2026, not maintained. The adapters
-initialise, train, export and load back; nothing here is shown to improve
-held-out memory quality (see "Not yet proven" below), and the Qwen3.5 MLX
-internals it patches will have moved. A starting point only.
+This is the reusable core of a larger δ-mem research workspace: a native
+MLX trainer for delta-memory adapters on Qwen3.5, the runtime adapter
+loader, and unit tests that run without heavy downloads. The full loop
+works: adapters initialise, train, export and load back, including the
+Qwen3.5 full-attention query-gate handling and optional wrappers for the
+GatedDeltaNet layers.
 
-For LoRA fine-tuning on Apple Silicon today use mlx-lm's own `mlx_lm.lora`,
-https://github.com/ml-explore/mlx-lm. For δ-mem itself start from the
-paper, https://arxiv.org/abs/2605.12357, and the released adapter rather
-than this trainer.
+Know before you build on it: the export is from June 2026 and has not
+been updated since. MLX and the Qwen3.5 MLX model internals it patches
+have moved, so expect some breakage at those seams. The benchmark side
+was carried only through smoke and pilot runs, so the "Not yet proven"
+list below is the honest state of the research question.
 
-## Status
+Issues and pull requests are welcome; replies may be slow.
+
+Related: mlx-lm's `mlx_lm.lora`, https://github.com/ml-explore/mlx-lm,
+is the maintained path for LoRA fine-tuning on Apple Silicon. The δ-mem
+paper, https://arxiv.org/abs/2605.12357, and its released adapter are the
+reference for the method itself.
+
+## What Is Verified
 
 Mechanically verified:
 
