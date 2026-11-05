@@ -8,6 +8,18 @@ the reusable native-MLX trainer, runtime adapter loader, and no-heavy unit tests
 while excluding local planning logs, model checkpoints, benchmark outputs, and
 machine-specific paths.
 
+## Where this stands (November 2026)
+
+A one-commit research export from June 2026, not maintained. The adapters
+initialise, train, export and load back; nothing here is shown to improve
+held-out memory quality (see "Not yet proven" below), and the Qwen3.5 MLX
+internals it patches will have moved. A starting point only.
+
+For LoRA fine-tuning on Apple Silicon today use mlx-lm's own `mlx_lm.lora`,
+https://github.com/ml-explore/mlx-lm. For δ-mem itself start from the
+paper, https://arxiv.org/abs/2605.12357, and the released adapter rather
+than this trainer.
+
 ## Status
 
 Mechanically verified:
